@@ -68,15 +68,78 @@
 // ('.list-group-item:nth-child(3)');
 // thirdItem.style.color='white';
 
-var titles=document.querySelectorAll('.title');
-console.log(titles);
+// var titles=document.querySelectorAll('.title');
+// console.log(titles);
 
-titles[1].style.color='Hello';
+// titles[1].style.color='Hello';
 
-var odd=document.querySelectorAll('li:nth-child(odd)');
-for(var i=0;i<odd.length;i++){
-    odd[i].style.backgroundColor='green';
-}
+// var odd=document.querySelectorAll('li:nth-child(odd)');
+// for(var i=0;i<odd.length;i++){
+//     odd[i].style.backgroundColor='green';
+// }
+
+//traversing the dom
+ var itemList = document.querySelector('#items');
+// console.log(itemList.parentNode);
+//itemList.parentNode.style.backgroundColor="#f4f4f4";
+// console.log(itemList.parentNode.parentNode);
+// console.log(itemList.parentNode.parentNode.parentNode);
+// itemList.parentNode.parentNode.parentNode.style.backgroundColor="#f4f4f4";
+
+//console.log(itemList.childNodes);
+
+// console.log(itemList.children);
+// console.log(itemList.children[1]);
+// itemList.children[1].style.backgroundColor ='yellow';
+
+
+// console.log(itemList.firstChild);
+// console.log(itemList.lastChild);
+// itemList.firstElementChild.textContent='Hello';
+
+
+
+//console.log(itemList.nextSibling);
+
+// console.log(itemList.previousSibling);
+
+//  console.log(itemList.previousElementSibling);
+
+// itemList.previousElementSibling.style.color='green';
+
+// creatElement
+
+//create a div
+// var newDiv=document.createElement('div');
+// newDiv.className='hello';
+// newDiv.id='hello1';
+// newDiv.setAttribute('title','hello Div');
+
+// //create text node
+// newDivtext=document.createTextNode('hello');
+// newDiv.appendChild(newDivtext);
+
+// var container=document.querySelector('header .container');
+// var h1=document.querySelector('header h1');
+
+
+// console.log(newDiv);
+
+// container.insertBefore(newDiv,h1);
+
+//add hello befor li
+
+// var parentNode =document.getElementById('items');
+
+// parentNode.innerHTML='<li>hello</li>'+parentNode.innerHTML;
+// console.log(parentNode);
+
+
+
+
+
+
+
 
 
 
