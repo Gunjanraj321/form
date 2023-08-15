@@ -147,7 +147,9 @@ filter.addEventListener('keyup',filterItems);
 
 //form submit event
 
-form.addEventListener('submit', addItem);
+//form.addEventListener('submit', addItem);
+form.addEventListener('submit', addItem,addItem);
+
 
 // deletem item
 
@@ -159,7 +161,7 @@ function addItem(e){
 
     //get input
     var newItem=document.getElementById('item').value;
-
+    var newItem1=document.getElementById('description').value;
     //create li elemnt
     var li=document.createElement('li');
 
@@ -170,7 +172,7 @@ function addItem(e){
    //add text node with input value
 
    li.appendChild(document.createTextNode(newItem));
-
+   li.appendChild(document.createTextNode(newItem1))
    //create del btn
 
    var deletebtn=document.createElement('button');
@@ -189,6 +191,7 @@ function addItem(e){
    //append li to list
 
    itemList.appendChild(li);
+
 }
 
 // remove Item
@@ -210,13 +213,17 @@ function filterItems(e){
     var text = e.target.value.toLowerCase();
     // get lis
     var items = itemList.getElementsByTagName('li');
+
     //convert to an array
+   // Array.from(items).forEach(function(description)){
     Array.from(items).forEach(function(item){
         var itemName=item.firstChild.textContent;
-        if(itemName.toLowerCase().indexOf(text)!= -1){
+        var description=item.childNodes[1].textContent;
+        if(itemName.toLowerCase().indexOf(text)!= -1 || description.toLowerCase().indexOf(description)!= -1){
             item.style.display ='block';
         }else{
             item.style.display='none';
         }
     });
+   
 }
